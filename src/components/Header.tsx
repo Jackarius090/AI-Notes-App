@@ -3,13 +3,14 @@ import Link from "next/link";
 import { Button } from "./ui/button";
 import { ModeToggle } from "./DarkModeToggle";
 import { shadow } from "@/styles/utils";
+import LogOutButton from "./LogOutButton";
 
 async function Header() {
-  const user = null;
+  const user = 1;
 
   return (
     <header
-      className="bg-popover relative flex h-24 w-full items-center justify-between px-3 sm:px-8"
+      className="relative flex h-24 w-full items-center justify-between bg-popover px-3 sm:px-8"
       style={{
         boxShadow: shadow,
       }}
@@ -33,8 +34,7 @@ async function Header() {
 
       <div className="flex gap-4">
         {user ? (
-          //   <LogOutButton />
-          "Logout"
+          <LogOutButton />
         ) : (
           <>
             <Button asChild>
